@@ -1,0 +1,152 @@
+# location_text	expected	must_include	must_exclude	jd_snippet
+# DRAFT for human review (2026-10-29). Columns are tab-separated; country lists are space-separated ISO codes.
+Remote - Worldwide	worldwide
+Worldwide	worldwide
+Anywhere	worldwide
+Remote (Anywhere)	worldwide
+Fully Remote - Work from anywhere	worldwide
+Global	worldwide
+Remote, Global	worldwide
+100% Remote (Worldwide)	worldwide
+Remote — Anywhere in the World	worldwide
+Remote / Worldwide	worldwide
+Distributed team - Worldwide	worldwide
+Remote: Globally	worldwide
+REMOTE - WORLDWIDE	worldwide
+Remote (Fully distributed)	worldwide
+Anywhere (Remote)	worldwide
+Remote Worldwide - Async	worldwide
+Remote	worldwide			We are a fully distributed company and hire from anywhere.
+Remote	worldwide			You can work from anywhere in the world.
+Remote	unclear
+Remote job	unclear
+Remote (US)	unclear
+Remote - United States	unclear
+Remote, USA	unclear
+United States (Remote)	unclear
+Remote - Canada	unclear
+Remote, Germany	unclear
+Remote (UK)	unclear
+Remote - India	unclear
+Remote - Pakistan	unclear
+Remote, Brazil	unclear
+Remote (Poland)	unclear
+Remote - Spain	unclear
+Remote — Mexico	unclear
+Remote, Philippines	unclear
+Remote - Netherlands	unclear
+Remote - Austin, TX	unclear
+Remote - San Francisco	unclear
+Remote (New York, NY)	unclear
+Remote - London	unclear
+Remote, Berlin	unclear
+Remote / Toronto	unclear
+Remote - Bangalore	unclear
+Remote - Karachi	unclear
+Remote, Lahore	unclear
+Remote - Dubai	unclear
+Remote - Singapore	unclear
+Remote (Sydney)	unclear
+Remote - Lisbon	unclear
+Remote - Seattle, WA	unclear
+Remote — Buenos Aires	unclear
+San Francisco, CA	unclear
+New York, NY	unclear
+London, United Kingdom	unclear
+Berlin, Germany	unclear
+Hybrid - Amsterdam	unclear
+Toronto, ON	unclear
+Remote (UTC-5 to UTC+1)	unclear
+Remote - CET timezone	unclear
+Remote - US Only	restricted	US
+US Only (Remote)	restricted	US
+Remote, U.S. only	restricted	US
+Remote - United States only	restricted	US
+Remote (USA only)	restricted	US
+USA-only remote	restricted	US
+Remote - Anywhere in the US	restricted	US
+Anywhere in the United States	restricted	US
+Remote, must be based in the US	restricted	US
+Remote	restricted	US		Candidates must be located in the United States.
+Remote	restricted	US		Applicants must be US citizens due to contract requirements.
+Remote	restricted	US		This role requires an active security clearance.
+Remote	restricted	US		This is a W-2 position; no C2C.
+Remote (US)	restricted	US		You must be based in the US to be considered.
+Remote - Worldwide	restricted	US		Must be located in the United States.
+Remote - EU only	restricted	DE FR ES	GB PK US
+EU-only (Remote)	restricted	PL PT	GB PK
+Remote - Europe	restricted	DE	PK	You must have the right to work in the EU.
+Remote, UK only	restricted	GB	US PK DE
+UK Only	restricted	GB
+Remote (UK)	restricted	GB		Applicants need the right to work in the UK.
+Remote - Canada only	restricted	CA	US PK
+Canada only (Remote)	restricted	CA
+Remote - EMEA	region_open	DE GB AE EG ZA	PK US IN
+EMEA	region_open	FR NG SA	PK
+Remote (EMEA)	region_open	IL TR	PK
+Remote - EMEA timezones	region_open	GB	PK
+Remote - APAC	region_open	PK IN SG AU JP	US DE
+APAC (Remote)	region_open	PK PH
+Remote, Asia-Pacific	region_open	PK NZ
+Remote - MENA	region_open	AE SA EG MA	PK
+MENA region (Remote)	region_open	JO TN	PK
+Remote - Middle East	region_open	AE QA	PK
+Remote - Europe	region_open	DE PL GB CH	PK US
+Europe (Remote)	region_open	ES IT	PK
+Remote in Europe	region_open	NL	PK
+Anywhere in Europe	region_open	SE	PK
+Remote - European timezones	region_open	FR	PK
+Remote - Asia	region_open	PK IN CN AE	US DE
+Asia (Remote)	region_open	PK
+Remote - LATAM	region_open	BR AR MX CO	US PK
+LATAM (Remote)	region_open	CL UY	PK
+Remote, Latin America	region_open	PE	PK
+Remote - South America	region_open	BR	MX PK
+Remote - Americas	region_open	US CA BR	PK
+Remote - North America	region_open	US CA	MX PK
+Remote - South Asia	region_open	PK IN BD LK	US
+Remote - Southeast Asia	region_open	PH VN ID	PK
+Remote - Africa	region_open	NG KE ZA	PK
+Remote - EU	region_open	DE FR	GB PK
+Remote - EEA	region_open	NO DE	GB PK
+Remote - DACH	region_open	DE AT CH	PK
+Remote - Nordics	region_open	SE NO DK FI	PK
+Remote - CEE	region_open	PL RO UA	PK
+Remote - GCC	region_open	AE SA	PK
+Remote - ANZ	region_open	AU NZ	PK
+Remote - Oceania	region_open	AU	PK
+Remote - US or Canada	region_open	US CA	PK
+US/Canada (Remote)	region_open	US CA	PK
+Remote - USA, Canada, Mexico	region_open	US CA MX	PK
+Remote - Germany, Netherlands, Spain	region_open	DE NL ES	PK
+Remote: Pakistan, India, Bangladesh	region_open	PK IN BD	US
+Remote (Pakistan or UAE)	region_open	PK AE	US
+Remote - UK, Ireland	region_open	GB IE	US PK
+Remote - Poland, Romania, Ukraine	region_open	PL RO UA	PK
+Remote - Brazil / Argentina	region_open	BR AR	PK
+Remote - Egypt, Jordan, Lebanon	region_open	EG JO LB	PK
+Remote — Philippines, Vietnam, Indonesia	region_open	PH VN ID	PK
+Remote - EMEA incl. Pakistan	region_open	PK DE	US
+Remote - Europe or Pakistan	region_open	PK DE	US
+Remote - EMEA & APAC	region_open	PK DE SG	US
+Remote (EMEA, LATAM)	region_open	BR DE	PK US
+Remote - Europe & Middle East	region_open	DE AE	PK
+Remote - Americas or Europe	region_open	US DE BR	PK
+Remote - Spain or Portugal	region_open	ES PT	PK
+Remote - Canada or United Kingdom	region_open	CA GB	US
+Remote — France, Belgium, Luxembourg	region_open	FR BE LU	PK
+Remote - Benelux	region_open	BE NL LU	PK
+Remote - Kenya, Nigeria, South Africa	region_open	KE NG ZA	PK
+Remote - India, Sri Lanka	region_open	IN LK	PK
+Remote - Saudi Arabia, Qatar, Kuwait	region_open	SA QA KW	PK
+Remote - Turkey, Georgia, Armenia	region_open	TR GE AM	PK
+Remote - Czech Republic, Slovakia	region_open	CZ SK	PK
+Remote - Colombia, Peru, Chile	region_open	CO PE CL	PK
+Remote - Japan, South Korea	region_open	JP KR	KP PK
+Remote - Malaysia, Singapore	region_open	MY SG	PK
+Remote - Mexico or Costa Rica	region_open	MX CR	PK
+Remote - Asia (UTC+5 to UTC+9)	region_open	PK	US
+Remote - Pakistan (Karachi, Lahore, Islamabad)	unclear
+Remote - Hong Kong, Taiwan	region_open	HK TW	CN PK
+Remote (Nigeria or Ghana)	region_open	NG GH	NE PK
+Remote - Ireland, Malta	region_open	IE MT	GB PK

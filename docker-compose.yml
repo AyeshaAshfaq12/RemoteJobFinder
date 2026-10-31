@@ -1,0 +1,65 @@
+x-backend: &backend
+  build: ./backend
+  env_file:
+    - path: ./backend/.env
+      required: false
+  environment:
+    RJF_DATABASE_URL: postgresql+asyncpg://rjf:rjf@postgres:5432/rjf
+    RJF_DATABASE_URL_SYNC: postgresql+psycopg://rjf:rjf@postgres:5432/rjf
+    RJF_REDIS_URL: redis://redis:6379/0
+  depends_on:
+    postgres: { condition: service_healthy }
+    redis: { condition: service_healthy }
+
+services:
+  postgres:
+    image: postgres:16
+    environment: { POSTGRES_USER: rjf, POSTGRES_PASSWORD: rjf, POSTGRES_DB: rjf }
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rjf"]
+      interval: 2s
+      retries: 30
+
+  redis:
+    image: redis:7
+    ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      retries: 30
+
+  migrate:
+    <<: *backend
+    command: ["alembic", "upgrade", "head"]
+    restart: "no"
+
+  api:
+    <<: *backend
+    ports: ["8000:8000"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/healthz')"]
+      interval: 5s
+      retries: 20
+
+  worker:
+    <<: *backend
+    command: ["celery", "-A", "app.workers.celery_app:celery", "worker", "--loglevel=INFO"]
+
+  beat:
+    <<: *backend
+    command: ["celery", "-A", "app.workers.celery_app:celery", "beat", "--loglevel=INFO"]
+
+  web:
+    build: ./frontend
+    environment:
+      NEXT_PUBLIC_API_ORIGIN: http://localhost:8000
+    ports: ["3000:3000"]
+    depends_on:
+      api: { condition: service_healthy }
+
+volumes:
+  pgdata:
