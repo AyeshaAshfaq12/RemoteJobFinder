@@ -1,0 +1,107 @@
+/*
+ * "Briefing" design tokens (Build Spec §10.1).
+ * Views map host theme variables onto these when the host provides them;
+ * otherwise they follow prefers-color-scheme. data-theme forces a theme.
+ */
+:root {
+  /* Neutral gray, 11 steps (50 → 950) */
+  --rjf-gray-50: #f8f9fa;
+  --rjf-gray-100: #f1f3f5;
+  --rjf-gray-200: #e5e7eb;
+  --rjf-gray-300: #d1d5db;
+  --rjf-gray-400: #9ca3af;
+  --rjf-gray-500: #6b7280;
+  --rjf-gray-600: #4b5563;
+  --rjf-gray-700: #374151;
+  --rjf-gray-800: #1f2937;
+  --rjf-gray-900: #111827;
+  --rjf-gray-950: #0b0f17;
+
+  /* Semantic roles (light) */
+  --rjf-bg: #ffffff;
+  --rjf-surface: var(--rjf-gray-50);
+  --rjf-border: var(--rjf-gray-200);
+  --rjf-text: var(--rjf-gray-900); /* 17.7:1 on bg */
+  --rjf-text-secondary: var(--rjf-gray-600); /* 7.6:1 on bg */
+  --rjf-accent: #4f46e5; /* indigo-600 */
+  --rjf-accent-contrast: #ffffff;
+  --rjf-good: #15803d;
+  --rjf-good-bg: #dcfce7;
+  --rjf-warn: #b45309;
+  --rjf-warn-bg: #fef3c7;
+  --rjf-risk: #b91c1c;
+  --rjf-risk-bg: #fee2e2;
+  --rjf-focus: var(--rjf-accent);
+
+  /* Type: system UI stack in views (no font download) */
+  --rjf-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --rjf-font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --rjf-text-xs: 12px;
+  --rjf-text-sm: 13px;
+  --rjf-text-md: 14px;
+  --rjf-text-lg: 16px;
+  --rjf-text-xl: 20px;
+  --rjf-text-2xl: 28px;
+  --rjf-leading: 1.45;
+
+  /* Space: 4px grid */
+  --rjf-space-1: 4px;
+  --rjf-space-2: 8px;
+  --rjf-space-3: 12px;
+  --rjf-space-4: 16px;
+  --rjf-space-6: 24px;
+
+  /* Shape */
+  --rjf-radius-card: 10px;
+  --rjf-radius-chip: 6px;
+  --rjf-radius-pill: 999px;
+  --rjf-hairline: 1px solid var(--rjf-border);
+
+  /* Motion */
+  --rjf-dur-press: 120ms;
+  --rjf-dur-panel: 180ms;
+  --rjf-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --rjf-bg: var(--rjf-gray-950);
+    --rjf-surface: var(--rjf-gray-900);
+    --rjf-border: var(--rjf-gray-800);
+    --rjf-text: var(--rjf-gray-50);
+    --rjf-text-secondary: var(--rjf-gray-400);
+    --rjf-accent: #818cf8; /* indigo-400 */
+    --rjf-accent-contrast: var(--rjf-gray-950);
+    --rjf-good: #4ade80;
+    --rjf-good-bg: #052e16;
+    --rjf-warn: #fbbf24;
+    --rjf-warn-bg: #3b2504;
+    --rjf-risk: #f87171;
+    --rjf-risk-bg: #3f0d0d;
+  }
+}
+
+:root[data-theme="dark"] {
+  --rjf-bg: var(--rjf-gray-950);
+  --rjf-surface: var(--rjf-gray-900);
+  --rjf-border: var(--rjf-gray-800);
+  --rjf-text: var(--rjf-gray-50);
+  --rjf-text-secondary: var(--rjf-gray-400);
+  --rjf-accent: #818cf8;
+  --rjf-accent-contrast: var(--rjf-gray-950);
+  --rjf-good: #4ade80;
+  --rjf-good-bg: #052e16;
+  --rjf-warn: #fbbf24;
+  --rjf-warn-bg: #3b2504;
+  --rjf-risk: #f87171;
+  --rjf-risk-bg: #3f0d0d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --rjf-dur-press: 0ms;
+    --rjf-dur-panel: 0ms;
+  }
+}

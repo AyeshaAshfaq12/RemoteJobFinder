@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  background: var(--rjf-bg);
+  color: var(--rjf-text);
+  font-family: var(--rjf-font);
+  font-size: var(--rjf-text-md);
+  line-height: var(--rjf-leading);
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--rjf-space-6) var(--rjf-space-4);
+}
